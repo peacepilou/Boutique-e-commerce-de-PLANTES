@@ -55,9 +55,9 @@ console.log("Est-ce que 17 est pair ?", 17 % 2 == 0); // FALSE car 17 est impair
 // Et donc, nickname vaudra "Yo"
 
 
-let myAgeInString = prompt("Wesh ton age bb");
-let myAgeInNumber = parseInt(myAgeInString);
-let numberOfIphones = parseInt(prompt("Cb t'as d'iphones ?"));
+// let myAgeInString = prompt("Wesh ton age bb");
+// let myAgeInNumber = parseInt(myAgeInString);
+// let numberOfIphones = parseInt(prompt("Cb t'as d'iphones ?"));
                               // "3"
                     // 3
          
