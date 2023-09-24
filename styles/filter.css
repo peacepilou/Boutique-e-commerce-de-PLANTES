@@ -1,0 +1,18 @@
+section {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+}
+
+button {
+    padding: 1em 2em;
+    background-color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    transition: all 0.3s ease-in-out;
+}   
+
+button:hover {
+    cursor: pointer;    
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
