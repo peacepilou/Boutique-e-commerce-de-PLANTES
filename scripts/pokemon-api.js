@@ -4,14 +4,15 @@ function getPokemon() {
     for (let i = 1; i < 11; i++) {
         fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
             .then((resp) => resp.json())
-            .then((data) => {
+            .then((pkmn) => {
 
                 pokemonList.innerHTML +=
                     `
                 <div class="card">
-                    <img src=${data.sprites.front_default}>
-                    <img src=${data.sprites.back_default}>
-                    <p>${data.name}</p>
+                    <img src=${pkmn.sprites.front_default}>
+                    <img src=${pkmn.sprites.back_default}>
+                    <p>${pkmn.name}</p>
+                    <p>${getType(pkmn)}</p>
                 </div>
             `;
 
@@ -20,8 +21,18 @@ function getPokemon() {
 
 }
 
-// fetch("https://thronesapi.com/api/v2/Characters")
-//     .then((resp) => resp.json())
-//     .then((data) => {
-//         console.log(data);
-//     });
+function getType(pokemon) {
+
+    return pokemon.types.forEach(type => {
+        switch (type.name) {
+            case "grass":
+                return "Plante"
+            case "poison":
+                return "poison"
+        
+            default:
+                return ""
+        }
+
+    })
+}
