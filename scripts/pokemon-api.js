@@ -29,10 +29,21 @@ function getType(pokemon) {
                 return "Plante"
             case "poison":
                 return "poison"
-        
+
             default:
                 return ""
         }
 
     })
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("yo");
+    const items = document.getElementsByClassName("AccordionItem");
+    
+    for (let i = 0; i < items.length; i++) {
+        console.log(items[i]);
+        items[i].style.display = "none";
+    }
+
+});
